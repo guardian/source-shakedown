@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"baseUrl": ".",
+		"baseUrl": "./stories",
 		"outDir": "dist",
 		"module": "commonjs",
 		"target": "es5",
@@ -17,7 +17,9 @@
 		"noUnusedLocals": true,
 		"allowSyntheticDefaultImports": true,
 		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true
+		"emitDecoratorMetadata": true,
+		"skipLibCheck": true
 	},
+	"include": ["stories/**/*"],
 	"exclude": ["node_modules"]
 }
