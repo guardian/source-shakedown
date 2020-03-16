@@ -1035,6 +1035,15 @@
   dependencies:
     "@guardian/src-helpers" "^0.15.1"
 
+"@guardian/src-radio@^0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@guardian/src-radio/-/src-radio-0.15.1.tgz#031bdba9e00232f6f6ceaa1edecc002476e9856f"
+  integrity sha512-N7Coi5I9flLNLLIJkjO8VYii5x6KbvOYP5JVau7u1DnGL9ryf7WFLwPzi2gTVrGncJBLffuXxp7yKXmqTNO8vg==
+  dependencies:
+    "@guardian/src-helpers" "^0.15.1"
+    "@guardian/src-inline-error" "^0.15.1"
+    "@guardian/src-svgs" "^0.15.1"
+
 "@guardian/src-svgs@^0.15.1":
   version "0.15.1"
   resolved "https://registry.yarnpkg.com/@guardian/src-svgs/-/src-svgs-0.15.1.tgz#cc2e609893ca06f04bef36bc5e5a1b27c2e43ccf"
