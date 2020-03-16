@@ -992,6 +992,14 @@
     "@guardian/src-helpers" "^0.15.1"
     "@guardian/src-svgs" "^0.15.1"
 
+"@guardian/src-checkbox@^0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@guardian/src-checkbox/-/src-checkbox-0.15.1.tgz#3be71de7ca1e470b434326598623e1277b294cdc"
+  integrity sha512-wMzALV2f7M7asvcsP3PDkNwtcXyndk3H7Lcx8mf3yM3lM9TjVainkxe/xIOCjiI7YlrJk01/H9sGUonj8ERi5Q==
+  dependencies:
+    "@guardian/src-helpers" "^0.15.1"
+    "@guardian/src-inline-error" "^0.15.1"
+
 "@guardian/src-foundations@^0.15.1":
   version "0.15.1"
   resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-0.15.1.tgz#9e621aa2efee0cdb368ebbee129cd2a7d7e5868e"
@@ -1003,6 +1011,14 @@
   integrity sha512-A564LrM0c8SKC5TySb/dUxO+ggKhp5D+yWagQb3r3r/IS8SxWLhKQUzZpgaXNWyNWXrFTX362G7hAwL3SCNE5g==
   dependencies:
     "@guardian/src-foundations" "^0.15.1"
+
+"@guardian/src-inline-error@^0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@guardian/src-inline-error/-/src-inline-error-0.15.1.tgz#2c7a745ab41075728622c36355f52a3d9c22d61a"
+  integrity sha512-48i8cCZSu5GFB5eCBCAyHRptmPSNylmmx8MjP77Fs7QXh+xTtd4a0ExNXd/7j1Te7h/ye7w3V7t3x9vwWgxJ4A==
+  dependencies:
+    "@guardian/src-helpers" "^0.15.1"
+    "@guardian/src-svgs" "^0.15.1"
 
 "@guardian/src-svgs@^0.15.1":
   version "0.15.1"
