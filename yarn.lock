@@ -1000,6 +1000,14 @@
     "@guardian/src-helpers" "^0.15.1"
     "@guardian/src-inline-error" "^0.15.1"
 
+"@guardian/src-choice-card@^0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@guardian/src-choice-card/-/src-choice-card-0.15.1.tgz#26b7c10b1f24d24156bcaac1698d6380e01d60cd"
+  integrity sha512-MsJnqhPim++XMfgdO2S6WkaNwM7rGdX/PA41ijJRpqceLidM1YlLS2QP6k36Dz89IdFexIKdDadSHf7TFjMfTw==
+  dependencies:
+    "@guardian/src-helpers" "^0.15.1"
+    "@guardian/src-inline-error" "^0.15.1"
+
 "@guardian/src-foundations@^0.15.1":
   version "0.15.1"
   resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-0.15.1.tgz#9e621aa2efee0cdb368ebbee129cd2a7d7e5868e"
