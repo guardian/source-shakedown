@@ -27,6 +27,7 @@
 		"@guardian/src-choice-card": "^0.15.1",
 		"@guardian/src-foundations": "^0.15.1",
 		"@guardian/src-helpers": "^0.15.1",
+		"@guardian/src-link": "^0.15.1",
 		"@guardian/src-svgs": "^0.15.1",
 		"@storybook/addon-backgrounds": "^5.3.1",
 		"@storybook/addon-viewport": "^5.3.14",
