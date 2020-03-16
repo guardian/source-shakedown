@@ -1049,6 +1049,14 @@
   resolved "https://registry.yarnpkg.com/@guardian/src-svgs/-/src-svgs-0.15.1.tgz#cc2e609893ca06f04bef36bc5e5a1b27c2e43ccf"
   integrity sha512-skd0aH4ROEyB0d/t5uS3kD/cODK6Eb85VRKu94+RHw/C78ZJza90djRcApHPesSV6f/XlgwBhLH5U/9CAbnrhA==
 
+"@guardian/src-text-input@^0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@guardian/src-text-input/-/src-text-input-0.15.1.tgz#e686e0f8089471f86ad1b4b479dd6c614f5ea7fe"
+  integrity sha512-bWwewgJX/HYRj6QkbwZsPiqdPI93ZJV8QCtFXjFqKaYstOGU4qz+KOBat7VnsnDWqCURzUIM5OXCp3KCwJCDfQ==
+  dependencies:
+    "@guardian/src-helpers" "^0.15.1"
+    "@guardian/src-inline-error" "^0.15.1"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
