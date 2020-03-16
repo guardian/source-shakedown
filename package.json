@@ -6,7 +6,8 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"storybook": "start-storybook"
+		"storybook": "start-storybook",
+		"tsc": "tsc"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
