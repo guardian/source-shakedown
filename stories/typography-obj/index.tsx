@@ -1,5 +1,5 @@
 export default {
 	title: "Typography (obj)",
 }
-export * from "./titlepiece"
-export * from "./headline"
+export * from "./titlepiece-obj"
+export * from "./headline-obj"
