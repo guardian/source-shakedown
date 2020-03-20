@@ -1013,6 +1013,11 @@
   resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-0.15.1.tgz#9e621aa2efee0cdb368ebbee129cd2a7d7e5868e"
   integrity sha512-49Kjd9v6bAy3Xjs9q6/WV+J63bKgUWG5biOScUPE4UKFf3HkNFtafrrvnWf2/1qpDlhGYRFK9tGCh/enagMajA==
 
+"@guardian/src-foundations@^0.16.0-alpha.2":
+  version "0.16.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-0.16.0-alpha.2.tgz#181d119ca05854a9b81eccc4cfa7f26e86c3b455"
+  integrity sha512-2FgtXoad0jkfCA/p6ZM8zC0nW+/JEw+SMJW7dRPplU69Qq3v1fzvhQeSWNIxur2jituAm2VEYKh4ZEQ37M3E4w==
+
 "@guardian/src-helpers@^0.15.1":
   version "0.15.1"
   resolved "https://registry.yarnpkg.com/@guardian/src-helpers/-/src-helpers-0.15.1.tgz#ec5b75117bb066ef95002bfedaa76a371c4b1b33"
