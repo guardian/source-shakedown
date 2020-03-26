@@ -168,6 +168,7 @@ const [constraintLight] = themes.map(({ name, theme }) => {
 					supporting="An invalid entry will show error styling"
 					pattern="[0-9]{1,11}"
 					title="11 digit phone number"
+					type="tel"
 				/>
 			</div>
 		</ThemeProvider>
@@ -189,16 +190,6 @@ const [constraintLight] = themes.map(({ name, theme }) => {
 	return story
 })
 
-const telephoneInput = () => (
-	<div css={constrainedWith}>
-		<TextInput label="Telephone number" type="tel" />
-	</div>
-)
-
-telephoneInput.story = {
-	name: "telephone input",
-}
-
 export {
 	defaultLight,
 	optionalLight,
@@ -206,5 +197,4 @@ export {
 	widthsLight,
 	errorWithMessageLight,
 	constraintLight,
-	telephoneInput,
 }
