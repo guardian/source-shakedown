@@ -1,8 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { size } from "@guardian/src-foundations"
-import { Button, buttonDefault } from "@guardian/src-button"
-import { ThemeProvider } from "emotion-theming"
+import { Button } from "@guardian/src-button"
 
 import createEmotion from "create-emotion"
 const styleHook = document.getElementById("style-hook")
@@ -20,7 +19,7 @@ const primaryButtons = [
 		onClick={e => console.log("Primary clicked:", e.target)}
 		className={hotPinkBackground}
 	>
-		Primary
+		Primary with overrides
 	</Button>,
 	<Button onClick={e => console.log("Primary clicked:", e.target)}>
 		Primary
@@ -37,13 +36,18 @@ const flexStart = css`
 	}
 `
 
-export const priorityLight = () => (
-	<ThemeProvider theme={buttonDefault}>
+export const createEmotionStory = () => (
+	<>
+		<span>
+			We use create-emotion to specify a div to add a style block to. We
+			then use vanilla emotion&apos;s css function to generate styles and
+			pass the resulting className to the Button component.
+		</span>
 		<div css={flexStart}>
 			{primaryButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
-	</ThemeProvider>
+	</>
 )
-priorityLight.story = { name: "overrides using create-emotion" }
+createEmotionStory.story = { name: "overrides using create-emotion" }
