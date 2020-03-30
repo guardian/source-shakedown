@@ -22,7 +22,7 @@ const themes: {
 	theme: {}
 }[] = [
 	{
-		name: "light",
+		name: "default",
 		theme: radioDefault,
 	},
 	{ name: "brand", theme: radioBrand },
