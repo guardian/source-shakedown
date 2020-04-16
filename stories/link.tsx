@@ -5,6 +5,7 @@ import {
 	SvgArrowRightStraight,
 	SvgExternal,
 	SvgChevronLeftSingle,
+	SvgIndent,
 } from "@guardian/src-svgs"
 import { size } from "@guardian/src-foundations"
 import { Link, linkLight, linkBrandYellow, linkBrand } from "@guardian/src-link"
@@ -99,17 +100,33 @@ subduedLight.story = { name: "subdued light" }
 export const textAndIcon = () => (
 	<>
 		<div css={spacer}>
+			<h2>Square icon</h2>
 			<Link icon={<SvgExternal />} href="#">
 				Terms and conditions
 			</Link>
 		</div>
-		<div css={flexStart}>
-			<Link icon={<SvgChevronLeftSingle />} href="#">
-				Previous
+
+		<div css={spacer}>
+			<h2>Wide icon</h2>
+			<Link icon={<SvgIndent />} subdued={true} href="#">
+				Reply
 			</Link>
-			<Link iconSide="right" icon={<SvgArrowRightStraight />} href="#">
-				Next
-			</Link>
+		</div>
+
+		<div css={spacer}>
+			<h2>Left and right aligned</h2>
+			<div css={flexStart}>
+				<Link icon={<SvgChevronLeftSingle />} href="#">
+					Previous
+				</Link>
+				<Link
+					iconSide="right"
+					icon={<SvgArrowRightStraight />}
+					href="#"
+				>
+					Next
+				</Link>
+			</div>
 		</div>
 	</>
 )
