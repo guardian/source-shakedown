@@ -3,6 +3,7 @@ import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import { SvgCheckmark, SvgClose } from "@guardian/src-svgs"
 import { size, space } from "@guardian/src-foundations"
+import { background } from "@guardian/src-foundations/palette"
 import {
 	Button,
 	LinkButton,
@@ -21,12 +22,23 @@ const priorityButtons = [
 		Primary
 	</Button>,
 	<Button
-		onClick={() => console.log("Secondary clicked")}
+		onClick={e => console.log("Secondary clicked:", e.target)}
 		priority="secondary"
 	>
 		Secondary
 	</Button>,
-	<Button priority="tertiary">Tertiary</Button>,
+	<Button
+		onClick={e => console.log("Tertiary clicked", e.target)}
+		priority="tertiary"
+	>
+		Tertiary
+	</Button>,
+	<Button
+		priority="subdued"
+		onClick={e => console.log("Subdued clicked", e.target)}
+	>
+		Subdued
+	</Button>,
 ]
 const sizeButtons = [
 	<Button>Default</Button>,
@@ -54,6 +66,9 @@ const linkButtons = [
 	<LinkButton href="#" priority="secondary">
 		Secondary
 	</LinkButton>,
+	<LinkButton href="#" priority="tertiary">
+		Tertiary
+	</LinkButton>,
 ]
 const iconLinkButtons = [
 	<LinkButton href="#" showIcon={true}>
@@ -61,6 +76,9 @@ const iconLinkButtons = [
 	</LinkButton>,
 	<LinkButton href="#" showIcon={true} priority="secondary">
 		Secondary
+	</LinkButton>,
+	<LinkButton href="#" showIcon={true} priority="tertiary">
+		Tertiary
 	</LinkButton>,
 ]
 /* eslint-enable react/jsx-key */
@@ -109,6 +127,24 @@ priorityBlue.story = {
 	},
 }
 
+export const priorityGrey = () => (
+	<ThemeProvider theme={buttonDefault}>
+		<div css={flexStart}>
+			{priorityButtons.map((button, index) => (
+				<div key={index}>{button}</div>
+			))}
+		</div>
+	</ThemeProvider>
+)
+priorityGrey.story = {
+	name: "priority grey",
+	parameters: {
+		backgrounds: [
+			{ name: "grey", value: background.secondary, default: true },
+		],
+	},
+}
+
 export const priorityYellow = () => (
 	<ThemeProvider theme={buttonBrandAlt}>
 		<div css={flexStart}>
@@ -127,26 +163,12 @@ priorityYellow.story = {
 	},
 }
 
-export const priorityGrey = () => (
-	<ThemeProvider theme={buttonBrand}>
-		<div css={flexStart}>
-			{priorityButtons.map((button, index) => (
-				<div key={index}>{button}</div>
-			))}
-		</div>
-	</ThemeProvider>
-)
-priorityGrey.story = {
-	name: "priority grey",
-	parameters: {
-		backgrounds: [{ name: "grey", value: "lightgrey", default: true }],
-	},
-}
+const readerRevenueButtons = [priorityButtons[0], priorityButtons[2]]
 
 export const priorityReaderRevenueLight = () => (
 	<ThemeProvider theme={buttonReaderRevenue}>
 		<div css={flexStart}>
-			{priorityButtons.slice(0, 2).map((button, index) => (
+			{readerRevenueButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
@@ -164,7 +186,7 @@ priorityReaderRevenueLight.story = {
 export const priorityReaderRevenueBlue = () => (
 	<ThemeProvider theme={buttonReaderRevenueBrand}>
 		<div css={flexStart}>
-			{priorityButtons.slice(0, 2).map((button, index) => (
+			{readerRevenueButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
@@ -182,7 +204,7 @@ priorityReaderRevenueBlue.story = {
 export const priorityReaderRevenueYellow = () => (
 	<ThemeProvider theme={buttonReaderRevenueBrandAlt}>
 		<div css={flexStart}>
-			{priorityButtons.slice(0, 2).map((button, index) => (
+			{readerRevenueButtons.map((button, index) => (
 				<div key={index}>{button}</div>
 			))}
 		</div>
