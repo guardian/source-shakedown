@@ -13,7 +13,8 @@
 		"lint:styles": "stylelint stories/*.tsx",
 		"lint:js": "eslint . --ext .ts,.tsx,.js",
 		"lint": "yarn lint:js && yarn lint:styles",
-		"tsc": "tsc"
+		"tsc": "tsc",
+		"upgrade-src": "yarn ncu \"/^@guardian/src-.*$/\" -u && yarn"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
