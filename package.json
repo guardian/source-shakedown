@@ -16,7 +16,7 @@
 		"tsc": "tsc",
 		"upgrade-src": "yarn ncu \"/^@guardian/src-.*$/\" -u && yarn",
 		"ssr": "ts-node --project tsconfig.ssr.json -r tsconfig-paths/register ssr/server.tsx",
-		"ssr-dev": "ts-node-dev --project tsconfig.ssr.json -r tsconfig-paths/register ssr/index.ts"
+		"ssr-dev": "nodemon"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
@@ -55,6 +55,7 @@
 		"eslint-plugin-prettier": "^3.1.0",
 		"eslint-plugin-react": "^7.14.3",
 		"express": "^4.17.1",
+		"nodemon": "^2.0.3",
 		"npm-check-updates": "^5.0.0",
 		"prettier": "^1.18.2",
 		"react": "^16.8.6",

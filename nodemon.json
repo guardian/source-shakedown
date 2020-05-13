@@ -1,0 +1,5 @@
+{
+	"watch": ["ssr"],
+	"ext": "ts,tsx",
+	"exec": "yarn ssr"
+}
