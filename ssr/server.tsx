@@ -1,5 +1,6 @@
 import express from "express"
 import { accordion } from "./accordion"
+import { button } from "./button"
 import { render } from "./render"
 import { root } from "./root"
 
@@ -11,6 +12,9 @@ app.get("/", (req, res) => {
 })
 app.get("/accordion", (req, res) => {
 	res.send(render("Accordion", accordion))
+})
+app.get("/button", (req, res) => {
+	res.send(render("Button", button))
 })
 
 const PORT = 3030
