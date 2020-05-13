@@ -1,6 +1,5 @@
 import express from "express"
 import React from "react"
-import { css } from "emotion"
 import { renderToStaticMarkup } from "react-dom/server"
 import { extractCritical } from "emotion-server"
 import { Accordion, AccordionRow } from "@guardian/src-accordion"
