@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@guardian/src-foundations/typography": [
+				"./node_modules/@guardian/src-foundations/typography/cjs"
+			]
+		},
+		"target": "es2018",
+		"module": "commonjs",
+		"strict": true,
+		"noImplicitReturns": true,
+		"esModuleInterop": true,
+		"jsx": "react",
+		"outDir": "ssr-dist"
+	},
+
+	"include": ["ssr/**/*"]
+}

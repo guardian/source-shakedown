@@ -14,7 +14,8 @@
 		"lint:js": "eslint . --ext .ts,.tsx,.js",
 		"lint": "yarn lint:js && yarn lint:styles",
 		"tsc": "tsc",
-		"upgrade-src": "yarn ncu \"/^@guardian/src-.*$/\" -u && yarn"
+		"upgrade-src": "yarn ncu \"/^@guardian/src-.*$/\" -u && yarn",
+		"ssr": "ts-node --project tsconfig.ssr.json -r tsconfig-paths/register ssr/server.tsx"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
