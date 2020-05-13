@@ -3,28 +3,26 @@ import React from "react"
 import { css } from "emotion"
 import { renderToStaticMarkup } from "react-dom/server"
 import { extractCritical } from "emotion-server"
-import { headline } from "@guardian/src-foundations/typography"
 import { Accordion, AccordionRow } from "@guardian/src-accordion"
 import { render as renderAccordionPage } from "./accordion"
 
 const app = express()
 app.use(express.json({ limit: "50mb" }))
 
-const ExampleComponent: React.FC<{}> = () => (
-	<h1
-		className={css`
-			${headline.medium()}
-		`}
-	>
-		Hello World
-	</h1>
-)
-
 app.get("/", (req, res) => {
-	const { html, css } = extractCritical(
-		renderToStaticMarkup(<ExampleComponent />),
-	)
-	res.send({ html, css })
+	res.send(`
+	<doctype html>
+	<html>
+	<head>
+	<title>Source Shakedown - SSR</title>
+	</head>
+	<body>
+	<ul>
+	<li><a href="/accordion">Accordion</a></li>
+	</ul>
+	</body>
+	</html>
+	`)
 })
 
 app.get("/accordion", (req, res) => {
