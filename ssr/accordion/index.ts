@@ -1,12 +1,13 @@
-export const render = () => {
+export const render = ({ html, css }: { html: string; css: string }) => {
 	return `
 		<doctype html>
 		<html>
 		<head>
 			<title>Accordion</title>
+			<style>${css}</style>
 		</head>
 		<body>
-		Accordion goes here
+		${html}
 		</body>
 		</html>
 	`

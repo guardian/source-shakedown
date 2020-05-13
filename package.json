@@ -15,7 +15,8 @@
 		"lint": "yarn lint:js && yarn lint:styles",
 		"tsc": "tsc",
 		"upgrade-src": "yarn ncu \"/^@guardian/src-.*$/\" -u && yarn",
-		"ssr": "ts-node --project tsconfig.ssr.json -r tsconfig-paths/register ssr/server.tsx"
+		"ssr": "ts-node --project tsconfig.ssr.json -r tsconfig-paths/register ssr/server.tsx",
+		"ssr-dev": "ts-node-dev --project tsconfig.ssr.json -r tsconfig-paths/register ssr/index.ts"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
