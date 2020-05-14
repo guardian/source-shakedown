@@ -9,6 +9,7 @@ export const root = `
 	<li><a href="/accordion">Accordion</a></li>
 	<li><a href="/button">Button</a></li>
 	<li><a href="/checkbox">Checkbox</a></li>
+	<li><a href="/choice-card">Choice card</a></li>
 	</ul>
 	</body>
 	</html>
