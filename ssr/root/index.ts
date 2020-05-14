@@ -8,6 +8,7 @@ export const root = `
 	<ul>
 	<li><a href="/accordion">Accordion</a></li>
 	<li><a href="/button">Button</a></li>
+	<li><a href="/checkbox">Checkbox</a></li>
 	</ul>
 	</body>
 	</html>

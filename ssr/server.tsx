@@ -1,8 +1,9 @@
 import express from "express"
-import { accordion } from "./accordion"
-import { button } from "./button"
 import { render } from "./render"
 import { root } from "./root"
+import { accordion } from "./accordion"
+import { button } from "./button"
+import { checkbox } from "./checkbox"
 
 const app = express()
 app.use(express.json({ limit: "50mb" }))
@@ -15,6 +16,9 @@ app.get("/accordion", (req, res) => {
 })
 app.get("/button", (req, res) => {
 	res.send(render("Button", button))
+})
+app.get("/checkbox", (req, res) => {
+	res.send(render("Checkbox", checkbox))
 })
 
 const PORT = 3030
