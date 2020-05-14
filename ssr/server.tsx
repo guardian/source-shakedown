@@ -5,6 +5,7 @@ import { accordion } from "./accordion"
 import { button } from "./button"
 import { checkbox } from "./checkbox"
 import { choiceCard } from "./choice-card"
+import { link } from "./link"
 
 const app = express()
 app.use(express.json({ limit: "50mb" }))
@@ -23,6 +24,9 @@ app.get("/checkbox", (req, res) => {
 })
 app.get("/choice-card", (req, res) => {
 	res.send(render("Choice card", choiceCard))
+})
+app.get("/link", (req, res) => {
+	res.send(render("Link", link))
 })
 
 const PORT = 3030

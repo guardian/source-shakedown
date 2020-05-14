@@ -10,6 +10,7 @@ export const root = `
 	<li><a href="/button">Button</a></li>
 	<li><a href="/checkbox">Checkbox</a></li>
 	<li><a href="/choice-card">Choice card</a></li>
+	<li><a href="/link">Link</a></li>
 	</ul>
 	</body>
 	</html>
