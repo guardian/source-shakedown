@@ -2,17 +2,19 @@ export const htmlDocument = ({
 	title,
 	html,
 	css,
+	ids,
 }: {
 	title: string
 	html: string
 	css: string
+	ids: string[]
 }) => {
 	return `
 		<doctype html>
 		<html>
 		<head>
 			<title>${title}</title>
-			<style>${css}</style>
+			<style data-emotion-css="${ids.join(" ")}">${css}</style>
 		</head>
 		<body>
 		${html}
