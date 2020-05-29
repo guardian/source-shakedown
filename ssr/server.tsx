@@ -9,6 +9,8 @@ import { link } from "./link"
 import { radio } from "./radio"
 import { textInput } from "./text-input"
 
+import { explainer } from "./explainer"
+
 const app = express()
 app.use(express.json({ limit: "50mb" }))
 
@@ -35,6 +37,9 @@ app.get("/radio", (req, res) => {
 })
 app.get("/text-input", (req, res) => {
 	res.send(render("Text input", textInput))
+})
+app.get("/explainer", (req, res) => {
+	res.send(render("Explainer", explainer))
 })
 
 const PORT = 3030
