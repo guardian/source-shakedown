@@ -69,6 +69,9 @@ const linkButtons = [
 	<LinkButton href="#" priority="tertiary">
 		Tertiary
 	</LinkButton>,
+	<LinkButton href="#" priority="subdued">
+		Subdued
+	</LinkButton>,
 ]
 const iconLinkButtons = [
 	<LinkButton href="#" showIcon={true}>
@@ -79,6 +82,9 @@ const iconLinkButtons = [
 	</LinkButton>,
 	<LinkButton href="#" showIcon={true} priority="tertiary">
 		Tertiary
+	</LinkButton>,
+	<LinkButton href="#" showIcon={true} priority="subdued">
+		Subdued
 	</LinkButton>,
 ]
 /* eslint-enable react/jsx-key */
