@@ -1,7 +1,14 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { storybookBackgrounds } from "@guardian/src-helpers"
-import { SvgDirectDebit, SvgCreditCard, SvgPayPal } from "@guardian/src-svgs"
+import {
+	SvgCamera,
+	SvgAudio,
+	SvgVideo,
+	SvgDirectDebit,
+	SvgCreditCard,
+	SvgPayPal,
+} from "@guardian/src-icons"
 import {
 	ChoiceCardGroup,
 	ChoiceCard,
@@ -52,6 +59,23 @@ const singleChoiceCards = [
 ]
 const iconChoiceCards = [
 	<ChoiceCard
+		value="picture"
+		label="Picture"
+		id="picture"
+		icon={<SvgCamera />}
+	/>,
+	<ChoiceCard
+		value="audio"
+		label="Audio"
+		id="audio"
+		icon={<SvgAudio />}
+		checked={true}
+	/>,
+	<ChoiceCard value="video" label="Video" id="video" icon={<SvgVideo />} />,
+]
+
+const paymentIconChoiceCards = [
+	<ChoiceCard
 		value="direct-debit"
 		label="Direct Debit"
 		id="direct-debit"
@@ -66,10 +90,19 @@ const iconChoiceCards = [
 	/>,
 	<ChoiceCard
 		value="paypal"
-		label="PayPal"
+		label="Paypal"
 		id="paypal"
 		icon={<SvgPayPal />}
 	/>,
+]
+const wildlyVaryingContentChoiceCards = [
+	<ChoiceCard
+		value="option-1"
+		label="A very, very long piece of text"
+		id="option-1"
+	/>,
+	<ChoiceCard value="option-2" label="Something in between" id="option-2" />,
+	<ChoiceCard value="option-3" label="Short" id="option-3" />,
 ]
 /* eslint-enable react/jsx-key */
 
@@ -78,11 +111,11 @@ export default {
 }
 
 const medium = css`
-	width: 20em;
+	width: 30em;
 `
 
 const wide = css`
-	width: 30em;
+	width: 40em;
 `
 
 const singleStateLight = () => (
@@ -155,8 +188,8 @@ multiStateWithSupportingLabelLight.story = {
 
 const singleStateWithIconLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<div css={wide}>
-			<ChoiceCardGroup name="colours" label="Payment method">
+		<div css={medium}>
+			<ChoiceCardGroup name="colours" label="Media format">
 				{iconChoiceCards.map((choiceCard, index) =>
 					React.cloneElement(choiceCard, { key: index }),
 				)}
@@ -167,6 +200,27 @@ const singleStateWithIconLight = () => (
 
 singleStateWithIconLight.story = {
 	name: `single state with icon light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
+const singleStateWithPaymentIconLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<div css={medium}>
+			<ChoiceCardGroup name="colours" label="Payment method">
+				{paymentIconChoiceCards.map((choiceCard, index) =>
+					React.cloneElement(choiceCard, { key: index }),
+				)}
+			</ChoiceCardGroup>
+		</div>
+	</ThemeProvider>
+)
+
+singleStateWithPaymentIconLight.story = {
+	name: `single state with payment icon light`,
 	parameters: {
 		backgrounds: [
 			Object.assign({}, { default: true }, storybookBackgrounds.default),
@@ -196,7 +250,7 @@ singleStateMobileLight.story = {
 
 const singleStateWithIconMobileLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<ChoiceCardGroup name="colours" label="Payment method">
+		<ChoiceCardGroup name="colours" label="Media format">
 			{iconChoiceCards.map((choiceCard, index) =>
 				React.cloneElement(choiceCard, { key: index }),
 			)}
@@ -214,9 +268,29 @@ singleStateWithIconMobileLight.story = {
 	},
 }
 
+const singleStateWithPaymentIconMobileLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<ChoiceCardGroup name="colours" label="Payment method">
+			{paymentIconChoiceCards.map((choiceCard, index) =>
+				React.cloneElement(choiceCard, { key: index }),
+			)}
+		</ChoiceCardGroup>
+	</ThemeProvider>
+)
+
+singleStateWithPaymentIconMobileLight.story = {
+	name: `single state with payment icon mobile light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+		viewport: { defaultViewport: "mobileMedium" },
+	},
+}
+
 const errorLight = () => (
 	<ThemeProvider theme={choiceCardDefault}>
-		<div css={wide}>
+		<div css={medium}>
 			<ChoiceCardGroup
 				name="colours"
 				error="Please select a choice card to continue"
@@ -238,12 +312,36 @@ errorLight.story = {
 	},
 }
 
+const wildlyVaryingLengthLight = () => (
+	<ThemeProvider theme={choiceCardDefault}>
+		<div css={wide}>
+			<ChoiceCardGroup name="options">
+				{wildlyVaryingContentChoiceCards.map((choiceCard, index) =>
+					React.cloneElement(choiceCard, { key: index }),
+				)}
+			</ChoiceCardGroup>
+		</div>
+	</ThemeProvider>
+)
+
+wildlyVaryingLengthLight.story = {
+	name: `single state wildly varying length light`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.default),
+		],
+	},
+}
+
 export {
 	singleStateLight,
 	singleStateWithLabelLight,
 	multiStateWithSupportingLabelLight,
 	singleStateWithIconLight,
+	singleStateWithPaymentIconLight,
 	singleStateMobileLight,
 	singleStateWithIconMobileLight,
+	singleStateWithPaymentIconMobileLight,
 	errorLight,
+	wildlyVaryingLengthLight,
 }
