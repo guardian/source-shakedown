@@ -7,8 +7,9 @@ import { checkbox } from "./checkbox"
 import { choiceCard } from "./choice-card"
 import { link } from "./link"
 import { radio } from "./radio"
-import { textArea } from "./text-area"
+// import { textArea } from "./text-area"
 import { textInput } from "./text-input"
+import { userFeedback } from "./user-feedback"
 
 const app = express()
 app.use(express.json({ limit: "50mb" }))
@@ -34,11 +35,14 @@ app.get("/link", (req, res) => {
 app.get("/radio", (req, res) => {
 	res.send(render("Radio", radio))
 })
-app.get("/text-area", (req, res) => {
-	res.send(render("Text area", textArea))
-})
+// app.get("/text-area", (req, res) => {
+// 	res.send(render("Text area", textArea))
+// })
 app.get("/text-input", (req, res) => {
 	res.send(render("Text input", textInput))
+})
+app.get("/user-feedback", (req, res) => {
+	res.send(render("User feedback", userFeedback))
 })
 
 const PORT = 3030

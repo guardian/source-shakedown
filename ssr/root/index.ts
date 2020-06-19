@@ -14,6 +14,7 @@ export const root = `
 	<li><a href="/radio">Radio</a></li>
 	<li><a href="/text-area">Text area</a></li>
 	<li><a href="/text-input">Text input</a></li>
+	<li><a href="/user-feedback">User feedback</a></li>
 	</ul>
 	</body>
 	</html>
