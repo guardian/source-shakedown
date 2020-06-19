@@ -8,6 +8,9 @@
 			"@guardian/src-foundations/mq": [
 				"./node_modules/@guardian/src-foundations/mq/cjs"
 			],
+			"@guardian/src-foundations/size": [
+				"./node_modules/@guardian/src-foundations/size/cjs"
+			],
 			"@guardian/src-foundations/themes": [
 				"./node_modules/@guardian/src-foundations/themes/cjs"
 			],

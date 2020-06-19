@@ -7,6 +7,7 @@ import { checkbox } from "./checkbox"
 import { choiceCard } from "./choice-card"
 import { link } from "./link"
 import { radio } from "./radio"
+import { textArea } from "./text-area"
 import { textInput } from "./text-input"
 
 const app = express()
@@ -32,6 +33,9 @@ app.get("/link", (req, res) => {
 })
 app.get("/radio", (req, res) => {
 	res.send(render("Radio", radio))
+})
+app.get("/text-area", (req, res) => {
+	res.send(render("Text area", textArea))
 })
 app.get("/text-input", (req, res) => {
 	res.send(render("Text input", textInput))

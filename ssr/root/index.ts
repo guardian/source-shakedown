@@ -12,6 +12,7 @@ export const root = `
 	<li><a href="/choice-card">Choice card</a></li>
 	<li><a href="/link">Link</a></li>
 	<li><a href="/radio">Radio</a></li>
+	<li><a href="/text-area">Text area</a></li>
 	<li><a href="/text-input">Text input</a></li>
 	</ul>
 	</body>
