@@ -1,7 +1,7 @@
 import React from "react"
-import { Button } from "@guardian/src-button"
+import { Button, LinkButton } from "@guardian/src-button"
 import { css } from "emotion"
-import { size } from "@guardian/src-foundations"
+import { space } from "@guardian/src-foundations"
 
 /* eslint-disable react/jsx-key */
 const priorityButtons = [
@@ -9,6 +9,18 @@ const priorityButtons = [
 	<Button priority="secondary">Secondary</Button>,
 	<Button priority="tertiary">Tertiary</Button>,
 	<Button priority="subdued">Subdued</Button>,
+]
+const priorityLinkButtons = [
+	<LinkButton href="#">Primary</LinkButton>,
+	<LinkButton href="#" priority="secondary">
+		Secondary
+	</LinkButton>,
+	<LinkButton href="#" priority="tertiary">
+		Tertiary
+	</LinkButton>,
+	<LinkButton href="#" priority="subdued">
+		Subdued
+	</LinkButton>,
 ]
 /* eslint-enable react/jsx-key */
 
@@ -18,14 +30,28 @@ const flexStart = css`
 	justify-content: flex-start;
 
 	> div {
-		margin-right: ${size.medium}px;
+		margin-right: ${space[9]}px;
 	}
+`
+const spacer = css`
+	margin-bottom: ${space[3]}px;
 `
 
 export const button = (
-	<div className={flexStart}>
-		{priorityButtons.map((button, index) => (
-			<div key={index}>{button}</div>
-		))}
-	</div>
+	<>
+		<div css={spacer}>
+			<div css={flexStart}>
+				{priorityButtons.map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</div>
+		<div css={spacer}>
+			<div css={flexStart}>
+				{priorityLinkButtons.map((button, index) => (
+					<div key={index}>{button}</div>
+				))}
+			</div>
+		</div>
+	</>
 )
