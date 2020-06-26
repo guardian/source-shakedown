@@ -23,4 +23,12 @@ const titlepieceStory = () => (
 )
 titlepieceStory.story = { name: "titlepiece" }
 
-export { titlepieceStory }
+const titlepieceNumbers = () => (
+	<div>
+		<p css={titlepieceLarge}>1234567890</p>
+		<p css={titlepieceMedium}>1234567890</p>
+		<p css={titlepieceSmall}>1234567890</p>
+	</div>
+)
+titlepieceNumbers.story = { name: "titlepiece numbers" }
+export { titlepieceStory, titlepieceNumbers }

@@ -39,4 +39,17 @@ const headlineStory = () => (
 )
 headlineStory.story = { name: "headline" }
 
-export { headlineStory }
+const headlineNumbers = () => (
+	<div>
+		<p css={headlineXlarge}>1234567890</p>
+		<p css={headlineLarge}>1234567890</p>
+		<p css={headlineMedium}>1234567890</p>
+		<p css={headlineSmall}>1234567890</p>
+		<p css={headlineXsmall}>1234567890</p>
+		<p css={headlineXxsmall}>1234567890</p>
+		<p css={headlineXxxsmall}>1234567890</p>
+	</div>
+)
+headlineNumbers.story = { name: "headline numbers" }
+
+export { headlineStory, headlineNumbers }
