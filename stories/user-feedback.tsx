@@ -46,7 +46,7 @@ const [errorLight, errorBlue] = themes.map(({ name, theme }) => {
 	return story
 })
 
-const [successLight] = themes.map(({ name, theme }) => {
+const [successLight, successBlue] = themes.map(({ name, theme }) => {
 	const story = () => (
 		<ThemeProvider theme={theme}>
 			<InlineSuccess>Your voucher code is valid</InlineSuccess>
@@ -69,4 +69,23 @@ const [successLight] = themes.map(({ name, theme }) => {
 	return story
 })
 
-export { errorLight, errorBlue, successLight }
+const errorLongLightMobile = () => (
+	<InlineError>
+		Please pick a date in the future, but not a leap year
+	</InlineError>
+)
+
+errorLongLightMobile.story = {
+	name: `long inline error light mobile`,
+	parameters: {
+		viewport: { defaultViewport: "mobileMedium" },
+	},
+}
+
+export {
+	errorLight,
+	errorBlue,
+	successLight,
+	successBlue,
+	errorLongLightMobile,
+}

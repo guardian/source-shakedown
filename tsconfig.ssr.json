@@ -1,23 +1,6 @@
 {
 	"compilerOptions": {
 		"baseUrl": ".",
-		"paths": {
-			"@guardian/src-foundations/accessibility": [
-				"./node_modules/@guardian/src-foundations/accessibility/cjs"
-			],
-			"@guardian/src-foundations/mq": [
-				"./node_modules/@guardian/src-foundations/mq/cjs"
-			],
-			"@guardian/src-foundations/size": [
-				"./node_modules/@guardian/src-foundations/size/cjs"
-			],
-			"@guardian/src-foundations/themes": [
-				"./node_modules/@guardian/src-foundations/themes/cjs"
-			],
-			"@guardian/src-foundations/typography": [
-				"./node_modules/@guardian/src-foundations/typography/cjs"
-			]
-		},
 		"target": "es2018",
 		"module": "commonjs",
 		"strict": true,
