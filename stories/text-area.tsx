@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import { css } from "@emotion/core"
+import { textSans } from "@guardian/src-foundations/typography"
 
 import { TextArea } from "@guardian/src-text-area"
 
@@ -64,10 +65,52 @@ errorWithMessageLight.story = {
 	name: `error with message light`,
 }
 
+const withMaxLength = () => (
+	<div css={wrapperStyles}>
+		<TextArea label="Comments" maxLength={10} />
+	</div>
+)
+
+withMaxLength.story = {
+	name: "with maxlength",
+}
+
+errorWithMessageLight.story = {
+	name: `error with message light`,
+}
+
+const wordCount = css`
+	${textSans.medium()}
+`
+
+const controlled = () => {
+	const [state, setState] = useState("")
+	return (
+		<div css={wrapperStyles}>
+			<TextArea
+				label="Comments"
+				supporting="Please keep comments respectful and abide by the community guidelines."
+				value={state}
+				onChange={event => setState(event.target.value)}
+			/>
+			<span css={wordCount}>
+				Word count:{" "}
+				{state.length > 0 ? state.trim().split(" ").length : 0}
+			</span>
+		</div>
+	)
+}
+
+controlled.story = {
+	name: "controlled example",
+}
+
 export {
 	defaultLight,
 	withRows,
 	optionalLight,
 	supportingTextLight,
 	errorWithMessageLight,
+	withMaxLength,
+	controlled,
 }

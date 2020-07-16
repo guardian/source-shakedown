@@ -1,194 +1,216 @@
-import React from "react"
+import React, { useState } from "react"
 import { css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
-import { storybookBackgrounds, ThemeName } from "@guardian/src-helpers"
 import { space } from "@guardian/src-foundations"
+import { textSans } from "@guardian/src-foundations/typography"
+import { from } from "@guardian/src-foundations/mq"
 import { TextInput, textInputLight } from "@guardian/src-text-input"
 
 export default {
 	title: "TextInput",
 }
 
-const themes: {
-	name: ThemeName
-	theme: {}
-}[] = [
-	{
-		name: "default",
-		theme: textInputLight,
-	},
-]
-
 const constrainedWith = css`
-	width: 30em;
+	width: 100%;
+	${from.phablet} {
+		width: 30em;
+	}
 `
 
-const [defaultLight] = themes.map(({ name, theme }) => {
-	const story = () => (
-		<ThemeProvider theme={theme}>
+const defaultLight = () => {
+	const [state, setState] = useState("")
+	return (
+		<ThemeProvider theme={textInputLight}>
 			<div css={constrainedWith}>
-				<TextInput label="First name" />
+				<TextInput
+					label="First name"
+					value={state}
+					onChange={event => setState(event.target.value)}
+				/>
 			</div>
 		</ThemeProvider>
 	)
+}
 
-	story.story = {
-		name: `default ${name}`,
-		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[name],
-				),
-			],
-		},
-	}
+defaultLight.story = {
+	name: `default light`,
+}
 
-	return story
-})
+const optionalLight = () => (
+	<ThemeProvider theme={textInputLight}>
+		<div css={constrainedWith}>
+			<TextInput label="First name" optional={true} />
+		</div>
+	</ThemeProvider>
+)
 
-const [optionalLight] = themes.map(({ name, theme }) => {
-	const story = () => (
-		<ThemeProvider theme={theme}>
+optionalLight.story = {
+	name: `optional light`,
+}
+
+const supportingTextLight = () => {
+	const [state, setState] = useState("")
+	return (
+		<ThemeProvider theme={textInputLight}>
 			<div css={constrainedWith}>
-				<TextInput label="First name" optional={true} />
+				<TextInput
+					label="Email"
+					supporting="alex@example.com"
+					value={state}
+					onChange={event => setState(event.target.value)}
+				/>
 			</div>
 		</ThemeProvider>
 	)
-
-	story.story = {
-		name: `optional ${name}`,
-		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[name],
-				),
-			],
-		},
-	}
-
-	return story
-})
-const [supportingTextLight] = themes.map(({ name, theme }) => {
-	const story = () => (
-		<ThemeProvider theme={theme}>
-			<div css={constrainedWith}>
-				<TextInput label="Email" supporting="alex@example.com" />
-			</div>
-		</ThemeProvider>
-	)
-
-	story.story = {
-		name: `supporting text ${name}`,
-		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[name],
-				),
-			],
-		},
-	}
-
-	return story
-})
+}
+supportingTextLight.story = {
+	name: `supporting text light`,
+}
 
 const spacer = css`
 	margin-bottom: ${space[3]}px;
 `
-const [widthsLight] = themes.map(({ name, theme }) => {
-	const story = () => (
-		<ThemeProvider theme={theme}>
+const widthsLight = () => {
+	const [state, setState] = useState({ wide: "", medium: "", short: "" })
+	return (
+		<ThemeProvider theme={textInputLight}>
 			<div css={spacer}>
-				<TextInput label="First name" width={30} />
+				<TextInput
+					label="First name"
+					width={30}
+					value={state.wide}
+					onChange={event =>
+						setState({
+							wide: event.target.value,
+							medium: state.medium,
+							short: state.short,
+						})
+					}
+				/>
 			</div>
 			<div css={spacer}>
-				<TextInput label="Postcode" width={10} />
+				<TextInput
+					label="Postcode"
+					width={10}
+					value={state.medium}
+					onChange={event =>
+						setState({
+							wide: state.wide,
+							medium: event.target.value,
+							short: state.short,
+						})
+					}
+				/>
 			</div>
 			<div css={spacer}>
-				<TextInput label="Year of birth" width={4} />
+				<TextInput
+					label="Year of birth"
+					width={4}
+					value={state.short}
+					onChange={event =>
+						setState({
+							wide: state.wide,
+							medium: state.medium,
+							short: event.target.value,
+						})
+					}
+				/>
 			</div>
 		</ThemeProvider>
 	)
+}
 
-	story.story = {
-		name: `widths ${name}`,
-		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[name],
-				),
-			],
-		},
-	}
+widthsLight.story = {
+	name: `widths light`,
+}
 
-	return story
-})
-
-const [errorWithMessageLight] = themes.map(({ name, theme }) => {
-	const story = () => (
-		<ThemeProvider theme={theme}>
+const errorWithMessageLight = () => {
+	const [state, setState] = useState("")
+	return (
+		<ThemeProvider theme={textInputLight}>
 			<div css={constrainedWith}>
 				<TextInput
 					label="First name"
 					error="Enter your first name below"
+					value={state}
+					onChange={event => setState(event.target.value)}
 				/>
 			</div>
 		</ThemeProvider>
 	)
+}
 
-	story.story = {
-		name: `error with message ${name}`,
-		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[name],
-				),
-			],
-		},
-	}
+errorWithMessageLight.story = {
+	name: `error with message light`,
+}
 
-	return story
-})
+const successWithMessageLight = () => {
+	const [state, setState] = useState("")
+	return (
+		<ThemeProvider theme={textInputLight}>
+			<div css={constrainedWith}>
+				<TextInput
+					label="Input Code"
+					success="This code is valid"
+					value={state}
+					onChange={event => setState(event.target.value)}
+				/>
+			</div>
+		</ThemeProvider>
+	)
+}
 
-const [constraintLight] = themes.map(({ name, theme }) => {
-	const story = () => (
-		<ThemeProvider theme={theme}>
+successWithMessageLight.story = {
+	name: `success with message ${name}`,
+}
+
+const constraintLight = () => {
+	const [state, setState] = useState("")
+
+	return (
+		<ThemeProvider theme={textInputLight}>
 			<div css={constrainedWith}>
 				<TextInput
 					label="Phone number"
-					supporting="An invalid entry will show error styling"
 					pattern="[0-9]{1,11}"
 					title="11 digit phone number"
 					type="tel"
+					value={state}
+					onChange={event => setState(event.target.value)}
 				/>
 			</div>
 		</ThemeProvider>
 	)
+}
 
-	story.story = {
-		name: `with constraint ${name}`,
-		parameters: {
-			backgrounds: [
-				Object.assign(
-					{},
-					{ default: true },
-					storybookBackgrounds[name],
-				),
-			],
-		},
-	}
+constraintLight.story = {
+	name: `with constraint light`,
+}
 
-	return story
-})
+const message = css`
+	${textSans.medium()}
+`
+
+const controlled = () => {
+	const [state, setState] = useState("")
+
+	return (
+		<div css={constrainedWith}>
+			<div css={spacer}>
+				<TextInput
+					label="First name"
+					value={state}
+					onChange={event => setState(event.target.value)}
+				/>
+			</div>
+			<span css={message}>{state ? `Hello, ${state}` : ""}</span>
+		</div>
+	)
+}
+
+controlled.story = {
+	name: "controlled example",
+}
 
 export {
 	defaultLight,
@@ -196,5 +218,7 @@ export {
 	supportingTextLight,
 	widthsLight,
 	errorWithMessageLight,
+	successWithMessageLight,
 	constraintLight,
+	controlled,
 }

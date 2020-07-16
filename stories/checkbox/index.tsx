@@ -1,6 +1,7 @@
 export default {
 	title: "Checkbox",
 }
+export * from "./controlled"
 export * from "./default"
 export * from "./error"
 export * from "./indeterminate"

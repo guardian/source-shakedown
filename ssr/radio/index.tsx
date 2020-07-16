@@ -3,7 +3,7 @@ import { RadioGroup, Radio } from "@guardian/src-radio"
 /* eslint-disable react/jsx-key */
 const radios = [
 	<Radio value="red" label="Red" />,
-	<Radio value="green" label="Green" checked={true} />,
+	<Radio value="green" label="Green" defaultChecked={true} />,
 	<Radio value="blue" label="Blue" />,
 ]
 /* eslint-enable react/jsx-key */
