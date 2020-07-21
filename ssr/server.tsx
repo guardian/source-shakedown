@@ -5,6 +5,7 @@ import { accordion } from "./accordion"
 import { button } from "./button"
 import { checkbox } from "./checkbox"
 import { choiceCard } from "./choice-card"
+import { grid } from "./grid"
 import { link } from "./link"
 import { radio } from "./radio"
 import { textArea } from "./text-area"
@@ -28,6 +29,9 @@ app.get("/checkbox", (req, res) => {
 })
 app.get("/choice-card", (req, res) => {
 	res.send(render("Choice card", choiceCard))
+})
+app.get("/grid", (req, res) => {
+	res.send(render("Grid", grid))
 })
 app.get("/link", (req, res) => {
 	res.send(render("Link", link))
