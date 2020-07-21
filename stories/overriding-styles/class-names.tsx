@@ -1,6 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { size } from "@guardian/src-foundations"
+import { space } from "@guardian/src-foundations"
 import { Button } from "@guardian/src-button"
 
 /* eslint-disable react/jsx-key */
@@ -15,7 +15,7 @@ const flexStart = css`
 	justify-content: flex-start;
 
 	> div {
-		margin-right: ${size.medium}px;
+		margin-right: ${space[6]}px;
 	}
 `
 

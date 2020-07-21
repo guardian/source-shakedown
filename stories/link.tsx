@@ -7,8 +7,8 @@ import {
 	SvgChevronLeftSingle,
 	SvgIndent,
 } from "@guardian/src-svgs"
-import { size } from "@guardian/src-foundations"
-import { Link, linkLight, linkBrandYellow, linkBrand } from "@guardian/src-link"
+import { space } from "@guardian/src-foundations"
+import { Link, linkDefault, linkBrandAlt, linkBrand } from "@guardian/src-link"
 import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */
@@ -34,7 +34,7 @@ const flexStart = css`
 	justify-content: flex-start;
 
 	> * {
-		margin-right: ${size.medium}px;
+		margin-right: ${space[6]}px;
 	}
 `
 
@@ -44,7 +44,7 @@ export default {
 }
 
 export const priorityLight = () => (
-	<ThemeProvider theme={linkLight}>
+	<ThemeProvider theme={linkDefault}>
 		<div css={flexStart}>
 			{priorityLinks.map((button, index) => (
 				<div key={index}>{button}</div>
@@ -69,7 +69,7 @@ priorityBlue.story = {
 }
 
 export const priorityYellow = () => (
-	<ThemeProvider theme={linkBrandYellow}>
+	<ThemeProvider theme={linkBrandAlt}>
 		<Link href="#">Primary</Link>
 	</ThemeProvider>
 )
@@ -87,7 +87,7 @@ const spacer = css`
 `
 
 export const subduedLight = () => (
-	<ThemeProvider theme={linkLight}>
+	<ThemeProvider theme={linkDefault}>
 		<div css={flexStart}>
 			{subduedLinks.map((button, index) => (
 				<div key={index}>{button}</div>
