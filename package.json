@@ -32,6 +32,7 @@
 		"@guardian/src-choice-card": "^2.0.0-rc.0",
 		"@guardian/src-ed-lines": "^2.0.0-rc.0",
 		"@guardian/src-foundations": "^2.0.0-rc.0",
+		"@guardian/src-grid": "^2.0.0-rc.0",
 		"@guardian/src-helpers": "^2.0.0-rc.0",
 		"@guardian/src-icons": "^2.0.0-rc.0",
 		"@guardian/src-link": "^2.0.0-rc.0",
@@ -76,5 +77,6 @@
 		"typescript": "^3.7.2",
 		"webpack": "^4.41.5"
 	},
-	"dependencies": {}
+	"dependencies": {
+	}
 }
