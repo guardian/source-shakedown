@@ -8,6 +8,7 @@ import { choiceCard } from "./choice-card"
 import { grid } from "./grid"
 import { link } from "./link"
 import { radio } from "./radio"
+import { select } from "./select"
 import { textArea } from "./text-area"
 import { textInput } from "./text-input"
 import { userFeedback } from "./user-feedback"
@@ -38,6 +39,9 @@ app.get("/link", (req, res) => {
 })
 app.get("/radio", (req, res) => {
 	res.send(render("Radio", radio))
+})
+app.get("/select", (req, res) => {
+	res.send(render("Select", select))
 })
 app.get("/text-area", (req, res) => {
 	res.send(render("Text area", textArea))
