@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "@guardian/src-link"
+import { Link, ButtonLink } from "@guardian/src-link"
 
 /* eslint-disable react/jsx-key */
 const priorityLinks = [
@@ -15,5 +15,6 @@ export const link = (
 		{priorityLinks.map((link, index) => (
 			<div key={index}>{link}</div>
 		))}
+		<ButtonLink>Button Link</ButtonLink>
 	</>
 )
