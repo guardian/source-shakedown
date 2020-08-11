@@ -15,6 +15,8 @@ export const link = (
 		{priorityLinks.map((link, index) => (
 			<div key={index}>{link}</div>
 		))}
-		<ButtonLink>Button Link</ButtonLink>
+		<form action="https://www.example.com">
+			<ButtonLink type="submit">Button Link</ButtonLink>
+		</form>
 	</>
 )
