@@ -1,11 +1,11 @@
+import { Radio } from "@guardian/src-radio"
+
 export default {
 	title: "Radio",
+	component: Radio,
 }
 
-export * from "./controlled"
-export * from "./vertical"
-export * from "./horizontal"
 export * from "./supporting-text"
-export * from "./error"
+export * from "./supporting-text-only"
 export * from "./ungrouped"
 export * from "./unlabelled"

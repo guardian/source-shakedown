@@ -8,6 +8,7 @@ import {
 } from "@guardian/src-radio"
 import { ThemeName } from "@guardian/src-helpers"
 import { ThemeProvider } from "emotion-theming"
+import { RadioTheme, UserFeedbackTheme } from "@guardian/src-foundations/themes"
 
 /* eslint-disable react/jsx-key */
 const unselectedRadios = [
@@ -19,7 +20,7 @@ const unselectedRadios = [
 
 const themes: {
 	name: ThemeName
-	theme: {}
+	theme: { radio: RadioTheme; userFeedback: UserFeedbackTheme }
 }[] = [
 	{
 		name: "default",

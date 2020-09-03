@@ -12,21 +12,18 @@ import { ThemeProvider } from "emotion-theming"
 import { RadioTheme, UserFeedbackTheme } from "@guardian/src-foundations/themes"
 
 /* eslint-disable react/jsx-key */
-const radiosWithSupportingText = [
+const radiosWithSupportingTextOnly = [
 	<Radio
 		value="6-for-6"
-		label="6 for 6"
 		supporting="£6 for the first 6 issues (then £37.50 every quarter)"
 	/>,
 	<Radio
 		value="quarterly"
-		label="Quarterly"
 		supporting="£37.50 every quarter"
 		defaultChecked={true}
 	/>,
 	<Radio
 		value="annual"
-		label="Annual"
 		supporting={
 			<>
 				Subscribe for <strong>12 months</strong> and save 10% £135 for 1
@@ -52,13 +49,13 @@ const narrow = css`
 	width: 30rem;
 `
 
-const [supportingTextLight, supportingTextBlue] = themes.map(
+const [supportingTextOnlyLight, supportingTextOnlyBlue] = themes.map(
 	({ name, theme }) => {
 		const story = () => (
 			<ThemeProvider theme={theme}>
 				<div css={narrow}>
 					<RadioGroup name="payment-options">
-						{radiosWithSupportingText.map((radio, index) =>
+						{radiosWithSupportingTextOnly.map((radio, index) =>
 							React.cloneElement(radio, { key: index }),
 						)}
 					</RadioGroup>
@@ -66,7 +63,7 @@ const [supportingTextLight, supportingTextBlue] = themes.map(
 			</ThemeProvider>
 		)
 		story.story = {
-			name: `supporting text ${name}`,
+			name: `supporting text only ${name}`,
 			parameters: {
 				backgrounds: [
 					Object.assign(
@@ -82,4 +79,4 @@ const [supportingTextLight, supportingTextBlue] = themes.map(
 	},
 )
 
-export { supportingTextLight, supportingTextBlue }
+export { supportingTextOnlyLight, supportingTextOnlyBlue }
