@@ -8,6 +8,7 @@ import { choiceCard } from "./choice-card"
 import { footer } from "./footer"
 import { grid } from "./grid"
 import { label } from "./label"
+import { layout } from "./layout"
 import { link } from "./link"
 import { radio } from "./radio"
 import { select } from "./select"
@@ -41,6 +42,9 @@ app.get("/grid", (req, res) => {
 })
 app.get("/label", (req, res) => {
 	res.send(render("Label", label))
+})
+app.get("/layout", (req, res) => {
+	res.send(render("Layout", layout))
 })
 app.get("/link", (req, res) => {
 	res.send(render("Link", link))

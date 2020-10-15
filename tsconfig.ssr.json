@@ -7,7 +7,7 @@
 		"noImplicitReturns": true,
 		"esModuleInterop": true,
 		"jsx": "react",
-		"outDir": "ssr-dist"
+		"outDir": "ssr-dist",
 	},
 	"include": ["ssr/**/*"]
 }

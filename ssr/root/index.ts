@@ -13,6 +13,7 @@ export const root = `
 	<li><a href="/footer">Footer</a></li>
 	<li><a href="/grid">Grid</a></li>
 	<li><a href="/label">Label</a></li>
+	<li><a href="/layout">Layout</a></li>
 	<li><a href="/link">Link</a></li>
 	<li><a href="/radio">Radio</a></li>
 	<li><a href="/select">Select</a></li>
