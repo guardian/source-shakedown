@@ -11,7 +11,6 @@ export const root = `
 	<li><a href="/checkbox">Checkbox</a></li>
 	<li><a href="/choice-card">Choice card</a></li>
 	<li><a href="/footer">Footer</a></li>
-	<li><a href="/grid">Grid</a></li>
 	<li><a href="/label">Label</a></li>
 	<li><a href="/layout">Layout</a></li>
 	<li><a href="/link">Link</a></li>

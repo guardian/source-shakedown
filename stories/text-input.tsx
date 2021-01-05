@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import { css } from "@emotion/core"
-import { ThemeProvider } from "emotion-theming"
+import { css, ThemeProvider } from "@emotion/react"
 import { space } from "@guardian/src-foundations"
 import { textSans } from "@guardian/src-foundations/typography"
 import { from } from "@guardian/src-foundations/mq"

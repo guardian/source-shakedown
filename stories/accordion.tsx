@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { Accordion, AccordionRow } from "@guardian/src-accordion"
 import { background } from "@guardian/src-foundations/palette"
 import { textSans } from "@guardian/src-foundations/typography"

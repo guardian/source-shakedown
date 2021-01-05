@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { titlepiece } from "@guardian/src-foundations/typography"
 
 const titlepieceLarge = css`

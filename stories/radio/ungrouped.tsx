@@ -1,6 +1,6 @@
 import React from "react"
 import { Radio, radioDefault } from "@guardian/src-radio"
-import { ThemeProvider } from "emotion-theming"
+import { ThemeProvider } from "@emotion/react"
 
 /* eslint-disable react/jsx-key */
 const radios = [

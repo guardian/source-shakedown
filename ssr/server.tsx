@@ -6,7 +6,6 @@ import { button } from "./button"
 import { checkbox } from "./checkbox"
 import { choiceCard } from "./choice-card"
 import { footer } from "./footer"
-import { grid } from "./grid"
 import { label } from "./label"
 import { layout } from "./layout"
 import { link } from "./link"
@@ -36,9 +35,6 @@ app.get("/choice-card", (req, res) => {
 })
 app.get("/footer", (req, res) => {
 	res.send(render("Footer", footer))
-})
-app.get("/grid", (req, res) => {
-	res.send(render("Grid", grid))
 })
 app.get("/label", (req, res) => {
 	res.send(render("Label", label))

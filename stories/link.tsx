@@ -1,15 +1,14 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css, ThemeProvider } from "@emotion/react"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import {
 	SvgArrowRightStraight,
 	SvgExternal,
 	SvgChevronLeftSingle,
 	SvgIndent,
-} from "@guardian/src-svgs"
+} from "@guardian/src-icons"
 import { space } from "@guardian/src-foundations"
 import { Link, linkDefault, linkBrandAlt, linkBrand } from "@guardian/src-link"
-import { ThemeProvider } from "emotion-theming"
 
 /* eslint-disable react/jsx-key */
 const priorityLinks = [

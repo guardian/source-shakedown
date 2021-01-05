@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { storybookBackgrounds } from "@guardian/src-helpers"
 import {
 	RadioGroup,
@@ -7,9 +7,7 @@ import {
 	radioDefault,
 	radioBrand,
 } from "@guardian/src-radio"
-import { ThemeName } from "@guardian/src-helpers"
-import { ThemeProvider } from "emotion-theming"
-import { RadioTheme, UserFeedbackTheme } from "@guardian/src-foundations/themes"
+import { ThemeProvider } from "@emotion/react"
 
 /* eslint-disable react/jsx-key */
 const radiosWithSupportingTextOnly = [
@@ -34,49 +32,49 @@ const radiosWithSupportingTextOnly = [
 ]
 /* eslint-enable react/jsx-key */
 
-const themes: {
-	name: ThemeName
-	theme: { radio: RadioTheme; userFeedback: UserFeedbackTheme }
-}[] = [
-	{
-		name: "default",
-		theme: radioDefault,
-	},
-	{ name: "brand", theme: radioBrand },
-]
-
 const narrow = css`
 	width: 30rem;
 `
 
-const [supportingTextOnlyLight, supportingTextOnlyBlue] = themes.map(
-	({ name, theme }) => {
-		const story = () => (
-			<ThemeProvider theme={theme}>
-				<div css={narrow}>
-					<RadioGroup name="payment-options">
-						{radiosWithSupportingTextOnly.map((radio, index) =>
-							React.cloneElement(radio, { key: index }),
-						)}
-					</RadioGroup>
-				</div>
-			</ThemeProvider>
-		)
-		story.story = {
-			name: `supporting text only ${name}`,
-			parameters: {
-				backgrounds: [
-					Object.assign(
-						{},
-						{ default: true },
-						storybookBackgrounds[name],
-					),
-				],
-			},
-		}
-
-		return story
-	},
+const supportingTextOnlyLight = () => (
+	<ThemeProvider theme={radioDefault}>
+		<div css={narrow}>
+			<RadioGroup name="payment-options">
+				{radiosWithSupportingTextOnly.map((radio, index) =>
+					React.cloneElement(radio, { key: index }),
+				)}
+			</RadioGroup>
+		</div>
+	</ThemeProvider>
 )
+supportingTextOnlyLight.story = {
+	name: `supporting text only default`,
+	parameters: {
+		backgrounds: {
+			default: "default",
+			values: [storybookBackgrounds.default],
+		},
+	},
+}
+
+const supportingTextOnlyBlue = () => (
+	<ThemeProvider theme={radioBrand}>
+		<div css={narrow}>
+			<RadioGroup name="payment-options">
+				{radiosWithSupportingTextOnly.map((radio, index) =>
+					React.cloneElement(radio, { key: index }),
+				)}
+			</RadioGroup>
+		</div>
+	</ThemeProvider>
+)
+supportingTextOnlyBlue.story = {
+	name: `supporting text only brand`,
+	parameters: {
+		backgrounds: [
+			Object.assign({}, { default: true }, storybookBackgrounds.brand),
+		],
+	},
+}
 
 export { supportingTextOnlyLight, supportingTextOnlyBlue }

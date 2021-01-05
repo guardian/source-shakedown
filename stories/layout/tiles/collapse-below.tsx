@@ -1,7 +1,7 @@
 import React from "react"
 import { Tiles } from "@guardian/src-layout"
 import { sport } from "@guardian/src-foundations/palette"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { textSans } from "@guardian/src-foundations/typography"
 
 const contents = css`
