@@ -8,6 +8,7 @@
 		"esModuleInterop": true,
 		"jsx": "react",
 		"outDir": "ssr-dist",
+		"types": ["@emotion/react/types/css-prop", "node", "@guardian/src-foundations/types/themes"]
 	},
 	"include": ["ssr/**/*"]
 }
