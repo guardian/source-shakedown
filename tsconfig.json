@@ -18,8 +18,7 @@
 		"allowSyntheticDefaultImports": true,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
-		"skipLibCheck": true,
-		"types": ["@emotion/react/types/css-prop", "node", "@guardian/src-foundations/types/themes"]
+		"skipLibCheck": true
 	},
 	"include": ["stories/**/*"],
 	"exclude": ["node_modules"]
