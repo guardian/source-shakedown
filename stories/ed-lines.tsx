@@ -1,5 +1,5 @@
 import React from "react"
-import { Lines } from "@guardian/src-ed-lines"
+import { Lines } from "@guardian/editorial"
 
 export default {
 	title: "Lines",
