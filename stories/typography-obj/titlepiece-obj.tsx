@@ -1,4 +1,3 @@
-import React from "react"
 import { titlepiece } from "@guardian/src-foundations/typography/obj"
 
 const titlepieceLarge = {

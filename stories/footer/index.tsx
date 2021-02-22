@@ -1,4 +1,3 @@
-import React from "react"
 import { Footer } from "@guardian/src-footer"
 import { css } from "@emotion/react"
 

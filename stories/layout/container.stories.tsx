@@ -1,4 +1,3 @@
-import React from "react"
 import { Container } from "@guardian/src-layout"
 
 const gridStoryWrapper = (storyFn: () => JSX.Element) => {

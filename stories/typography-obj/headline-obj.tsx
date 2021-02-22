@@ -1,4 +1,3 @@
-import React from "react"
 import { headline } from "@guardian/src-foundations/typography/obj"
 
 const headlineXlarge = {
