@@ -18,7 +18,8 @@
 		"allowSyntheticDefaultImports": true,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"types": ["node", "@emotion/react/types/css-prop"]
 	},
 	"include": ["stories/**/*"],
 	"exclude": ["node_modules"]
