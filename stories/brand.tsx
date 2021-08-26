@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/react"
 import { storybookBackgrounds, ThemeName } from "@guardian/src-helpers"
 
-import { SvgRoundel, SvgGuardianLogo } from "@guardian/src-brand"
+import { SvgRoundelDefault, SvgGuardianLogo } from "@guardian/src-brand"
 
 const iconWhite = css`
 	color: white;
@@ -68,7 +68,7 @@ export default {
 export const iconsDefaultBackground = () => (
 	<>
 		<Roundel>
-			<SvgRoundel />
+			<SvgRoundelDefault />
 		</Roundel>
 		<Logo>
 			<SvgGuardianLogo />
@@ -88,7 +88,7 @@ iconsDefaultBackground.story = {
 export const iconsBrandBackground = () => (
 	<>
 		<Roundel theme="brand">
-			<SvgRoundel />
+			<SvgRoundelDefault />
 		</Roundel>
 		<Logo theme="brand">
 			<SvgGuardianLogo />
