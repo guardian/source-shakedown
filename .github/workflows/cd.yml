@@ -8,7 +8,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v1
-            - uses: guardian/actions-setup-node@main
+            - uses: guardian/actions-setup-node@v2.4.0
+              with:
+                cache: 'yarn'
             - name: build
               run: |
                   yarn
