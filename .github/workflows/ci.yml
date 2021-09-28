@@ -11,6 +11,7 @@ jobs:
             - uses: guardian/actions-setup-node@v2.4.0
               with:
                 cache: 'yarn'
+            - run: node -v
             - name: build
               run: |
                   yarn
